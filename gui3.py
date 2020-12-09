@@ -26,8 +26,8 @@ mn.add_cascade(label="Edit")
 chkvar = IntVar()
 menu_lang = Menu(mn, tearoff=0)
 menu_lang.add_radiobutton(label="Java", value = 1, variable = chkvar)
-menu_lang.add_radiobutton(label="Python", value = 1, variable = chkvar)
-menu_lang.add_radiobutton(label="C++", value = 1, variable = chkvar)
+menu_lang.add_radiobutton(label="Python", value = 2, variable = chkvar)
+menu_lang.add_radiobutton(label="C++", value = 3, variable = chkvar)
 mn.add_cascade(label="Languages", menu = menu_lang)
 
 
@@ -35,10 +35,18 @@ menu_view = Menu(mn, tearoff=0)
 menu_view.add_checkbutton(label="Show minimap")
 mn.add_cascade(label="View", menu=menu_view)
 
-
 root.config(menu = mn)
 
+
+
+
 def cmd():
-    print()
+    print(chkvar.get())
+
 btn = Button(root, text="radiobutton", command = cmd)
+btn.pack()
+
+
+
+
 root.mainloop()
