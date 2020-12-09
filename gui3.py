@@ -23,11 +23,11 @@ mn.add_cascade(label = "File", menu = menu_file)
 
 mn.add_cascade(label="Edit")
 
-
+chkvar = IntVar()
 menu_lang = Menu(mn, tearoff=0)
-menu_lang.add_radiobutton(label="Java")
-menu_lang.add_radiobutton(label="Python")
-menu_lang.add_radiobutton(label="C++")
+menu_lang.add_radiobutton(label="Java", value = 1, variable = chkvar)
+menu_lang.add_radiobutton(label="Python", value = 1, variable = chkvar)
+menu_lang.add_radiobutton(label="C++", value = 1, variable = chkvar)
 mn.add_cascade(label="Languages", menu = menu_lang)
 
 
@@ -37,4 +37,8 @@ mn.add_cascade(label="View", menu=menu_view)
 
 
 root.config(menu = mn)
+
+def cmd():
+    print()
+btn = Button(root, text="radiobutton", command = cmd)
 root.mainloop()
