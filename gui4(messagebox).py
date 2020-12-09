@@ -13,17 +13,14 @@ root.geometry("400x400")
 # btn.pack()
 
 def info():
-    msgbox.showinfo("알림", "정상적으로 예매 완료되었습니다.")
+    msgbox.showinfo("알림", "정상적으로 예매 완료되었습니다")
 
 def warn():
-    msgbox.showwarning("경고", "해당 좌석은 매진되었습니다.")
-
-def error():
-    msgbox.showerror("에러", "결제 오류가 발생했습니다.")
+    msgbox.showwarning("경고", "해당 좌석은 매진되었습니다")
 
 Button(root, text="알림", command=info).pack()
+
 Button(root, text="경고", command=warn).pack()
-Button(root, text="에러", command=error).pack()
 
 
 root.mainloop()
