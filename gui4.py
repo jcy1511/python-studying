@@ -24,11 +24,14 @@ def error():
 def okcancel():
     msgbox.askokcancel("확인/취소", "확인/취소")
 
+def yesno():
+    msgbox.askyesno("y/n", "y/n")
 
 Button(root, text="알림", command=info).pack()
 Button(root, text="경고", command=warn).pack()
 Button(root, text="에러", command=error).pack()
 Button(root, text="확인/취소", command=okcancel).pack()
+Button(root, text="y/n", command=yesno).pack()
 
 
 root.mainloop()
