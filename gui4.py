@@ -25,7 +25,9 @@ def okcancel():
     msgbox.askokcancel("확인/취소", "확인/취소")
 
 def yesno():
-    msgbox.askyesno("y/n", "y/n")
+    response = msgbox.askyesno("y/n", "y/n")
+    print(response)
+
 
 Button(root, text="알림", command=info).pack()
 Button(root, text="경고", command=warn).pack()
