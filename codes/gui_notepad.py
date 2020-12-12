@@ -19,7 +19,7 @@ def open_file():
 def save_file():
      with open(filename, "w", encoding="utf8") as file :
             file.write(text.get("1.0", END))
-            msgbox.showinfo("저장되었습니다.")
+            msgbox.showinfo("저장","저장되었습니다.")
 
 
 
