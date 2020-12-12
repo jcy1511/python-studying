@@ -21,8 +21,13 @@ menu.add_cascade(label="도움말")
 root.config(menu=menu)
 
 
+scrollbar = Scrollbar(root)
+scrollbar.pack(side="right", fill="y")
+
+
 text=Text(root)
-text.pack(fill="both", expand=True)
+text.pack(side="left", fill="both", expand=True)
+
 
 
 root.mainloop()
