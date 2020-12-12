@@ -25,8 +25,10 @@ scrollbar = Scrollbar(root)
 scrollbar.pack(side="right", fill="y")
 
 
-text=Text(root)
+text=Text(root, yscrollcommand=scrollbar.set)
 text.pack(side="left", fill="both", expand=True)
+
+scrollbar.config(command=text.yview)
 
 
 
